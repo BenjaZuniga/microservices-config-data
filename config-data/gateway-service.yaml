@@ -17,15 +17,23 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: student-service
-          uri: lb://student-service
+        - id: simulate-service
+          uri: lb://simulate-service
           predicates:
-            - Path=/student/**
-        - id: book-service
-          uri: lb://book-service
+            - Path=/api/simulate/**
+        - id: user-service
+          uri: lb://user-service
           predicates:
-            - Path=/book/**
-        - id: pet-service
-          uri: lb://pet-service
+            - Path=/api/user/**
+        - id: request-service
+          uri: lb://request-service
           predicates:
-            - Path=/pet/**
+            - Path=/api/request/**
+        - id: evaluation-service
+          uri: lb://evaluation-service
+          predicates:
+            - Path=/api/evaluation/**
+        - id: request-tracking-service
+          uri: lb://request-tracking-service
+          predicates:
+            - Path=/api/requestTracking/**
