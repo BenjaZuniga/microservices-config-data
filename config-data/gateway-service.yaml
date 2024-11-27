@@ -20,16 +20,16 @@ spring:
         - id: simulate-service
           uri: lb://simulate-service
           predicates:
-            - Path=/api/simulate/**
+            - Path=/simulate/**
         - id: user-service
           uri: lb://user-service
           predicates:
-            - Path=/api/users/**
+            - Path=/users/**
         - id: request-service
           uri: lb://request-service
           predicates:
-            - Path=/api/requests/**
-            - Path=/api/documents/**
+            - Path=/requests/**
+            - Path=/documents/**
         - id: evaluation-service
           uri: lb://evaluation-service
           predicates:
