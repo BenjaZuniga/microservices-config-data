@@ -32,8 +32,8 @@ spring:
         - id: evaluation-service
           uri: lb://evaluation-service
           predicates:
-            - Path=/api/evaluation/**
+            - Path=/evaluate/**
         - id: request-tracking-service
           uri: lb://request-tracking-service
           predicates:
-            - Path=/api/requestTracking/**
+            - Path=/requestTracking/**
